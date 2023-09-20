@@ -4,6 +4,9 @@ Basically, implementation of mathematical model for AP/HTPB composite propellant
 ## Books
 - Rocket Propulsion Elements (9e) by George. P. Sutton.
 
+## Websites
+- Richard Nakka's Experimental Rocketry Webiste: https://www.nakka-rocketry.net/
+
 ## Papers
 
 - M. W. Beckstead (1970). A model of composite solid propellant combustion based on multiple flames. AIAA Journal, Vol. 8, pp 2200-2217.
