@@ -5,20 +5,15 @@ as a function of equivalence ratio.
 
 import cantera as ct
 import numpy as np
-import sys
 import csv
 
-##############################################################################
-# Edit these parameters to change the initial temperature, the pressure, and
-# the phases in the mixture.
 
-# phases
 gas = ct.Solution('gri30.yaml')
 
 # equivalence ratio range
-phi_min = 0.3
-phi_max = 3.5
-npoints = 33 
+phi_min = 0.2
+phi_max = 3.6
+npoints = 35
 
 # Set the gas composition :
 T = 300.0
@@ -34,7 +29,6 @@ in2 = gas.species_index('N2')
 air_N2_O2_ratio = 3.76
 stoich_O2 = gas.n_atoms(fuel_species,'C') + 0.25*gas.n_atoms(fuel_species,'H')
 
-##############################################################################
 
 # create some arrays to hold the data
 phi = np.zeros(npoints)
@@ -60,7 +54,6 @@ for i in range(npoints):
     print("At phi = ","%10.4f"% (phi[i])+ "  Tad = ","%10.4f"% (tad[i]))
 
 
-
 # write output CSV file for importing into Excel
 csv_file = 'adiabatic.csv'
 with open(csv_file, 'w') as outfile:
@@ -68,8 +61,7 @@ with open(csv_file, 'w') as outfile:
     writer.writerow(['phi','T (K)'] + gas.species_names)
     for i in range(npoints):
         writer.writerow([phi[i], tad[i]] + list(xeq[:,i]))
-#print('Output written to {0}'.format(csv_file))
-print("Output written to", "%s"%(csv_file))
+print(f'Output written to {0}'.format(csv_file))
 
 
 # Plot your results

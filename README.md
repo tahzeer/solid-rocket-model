@@ -6,6 +6,8 @@ Basically, implementation of mathematical model for AP/HTPB composite propellant
 
 ## Websites
 - Richard Nakka's Experimental Rocketry Webiste: https://www.nakka-rocketry.net/
+- Cantera Official Documentation: https://cantera.org/
+- CERFACS Cantera Tutorials: https://www.cefacs.fr/cantera/docs/
 
 ## Papers
 
@@ -17,3 +19,4 @@ Basically, implementation of mathematical model for AP/HTPB composite propellant
 
 - NPTEL Rocket Propultion: https://youtube.com/playlist?list=PL99EA5ECCC34949DB&si=Usy8K5EjdjDAXwrS 
 - Rocket Trajectories: https://youtube.com/playlist?list=PLOIRBaljOV8je0oxFAyj2o6YLXcBX1rTZ&si=jA3YcNfLtPteBwSR
+- Cantera Software: https://www.youtube.com/@canterasoftware
