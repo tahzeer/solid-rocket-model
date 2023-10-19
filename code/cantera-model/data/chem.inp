@@ -1,0 +1,292 @@
+ELEMENTS
+H O N CL C
+END
+
+SPECIES
+
+H2 O2 O H OH HO2 H2O2 H2O
+NO HNO HONO NO2 NO3 HNO3 N2O
+N N2 NH NNH NH2 NH3
+N2H2 N2H3 N2H4
+H2NO
+HCLO4
+CL CL2 HCL CLO CLOH CLOO CLO2 CLO3
+NOCL HOCL
+
+END SPECIES
+
+
+REACTIONS
+
+H2+M<=>H+H+M                               4.57E+19     -1.40     104000.0
+     H2/2.50/ H2O/12.00/
+O+H2O=OH+OH                                2.95E+06      2.02      13400.0
+O+H2=H+OH                                  5.08E+04      2.67       6290.0
+O+O+M<=>O2+M                               6.17E+15     -0.50          0.0
+     H2/2.50/ H2O/12.00/
+H+O2<=>O+OH                                3.52E+16     -0.70      17070.0
+H+O2(+M)=HO2(+M)                           5.590E+13    0.20   0.000E+00   ! Hong 2010
+     LOW / 3.500E+19    -1.300       0.000E+00/
+     TROE /0.70 1.0E-30 1.0E+30 1.0E+30/
+     H2/2.5/ H2O/0.00/ H2O2/12.0/ O2/0.00/
+H+O+M<=>OH+M                               4.72E+18     -1.00          0.0
+     H2/2.50/ H2O/12.00/
+OH+H2<=>H2O+H                              2.16E+08      1.51       3430.0
+OH+H+M<=>H2O+M                             2.21E+22     -2.00          0.0
+     H2/2.50/ H2O/12.00/
+HO2+O<=>O2+OH                              1.75E+13      0.00       -397.0
+HO2+H<=>H2+O2                              6.62E+13      0.00       2130.0
+HO2+H<=>OH+OH                              1.69E+14      0.00        874.0
+HO2+OH<=>H2O+O2                            1.90E+16     -1.00          0.0
+HO2+HO2<=>H2O2+O2                          4.20E+14      0.00      11980.0
+H2O2(+M)<=>OH+OH(+M)                       3.00E+14      0.00      48460.0
+     LOW  /0.12000E+18   0.00000E+00   0.45500E+05/
+     TROE /0.50000E+00   0.10000E-89   0.10000E+91/
+H2O2+O<=>OH+HO2                            9.64E+06      2.00       3970.0
+H2O2+H<=>H2O+OH                            1.00E+13      0.00       3590.0
+H2O2+H<=>HO2+H2                            4.82E+13      0.00       7950.0
+H2O2+OH<=>H2O+HO2                          5.802E+14     0.00       9557.0
+H+2O2=HO2+O2                        .300E+21     -1.7200       .00000E+00  ! Meynet
+H+O2+H2O=HO2+H2O                    .938E+19     -.76000       .00000E+00  ! Meynet
+2H+H2=2H2                           .900E+17     -.60000       .00000E+00  ! Meynet
+2H+H2O=H2+H2O                       .600E+20     -1.2500       .00000E+00  ! Meynet
+H+HO2=O+H2O                         .397E+13      .00000E+00   671.00      ! Meynet
+
+N+H2<=>H+NH                                1.60E+14      0.00      25140.0
+N+O2<=>NO+O                                6.40E+09      1.00       6280.0
+N+OH<=>NO+H                                3.80E+13      0.00          0.0
+N+HO2<=>NH+O2                              1.00E+13      0.00       2000.0
+N+HO2<=>NO+OH                              1.00E+13      0.00       2000.0
+N+NO<=>N2+O                                3.27E+12      0.30          0.0
+N+NO2<=>NO+NO                              4.00E+12      0.00          0.0
+N+NO2<=>N2O+O                              5.00E+12      0.00          0.0
+N+NO2<=>N2+O2                              1.00E+12      0.00          0.0
+N+HNO<=>NH+NO                              1.00E+13      0.00       2000.0
+N+HNO<=>N2O+H                              5.00E+10      0.50       3000.0
+N+N2O<=>N2+NO                              1.00E+13      0.00      19870.0
+
+NO+M<=>N+O+M                               9.64E+14      0.00     148400.0
+     N2/1.50/ H2O/10.0/!CO2/2.50/
+NO+H2<=>HNO+H                              1.39E+13      0.00      56530.0
+NO+O(+M)<=>NO2(+M)                         1.30E+15     -0.75          0.0
+     LOW  /0.47200E+25  -0.28700E+01   0.15510E+04/
+     TROE /0.95700E+00   0.10000E-89   0.83320E+04/
+NO+H(+M)<=>HNO(+M)                         1.52E+15     -0.41          0.0
+     LOW  /0.89600E+20   -0.13200E+01    0.73520E+03/
+NO+OH(+M)<=>HONO(+M)                       1.99E+12     -0.05       -721.0
+     LOW  /0.50800E+24   -0.25100E+01   -0.67560E+02/
+     TROE /0.62000E+00    0.10000E-89    0.10000E+91/
+     H2O/5.00/
+NO+OH=HONO                                 2.64E+12 -0.085    -647.0 ! Meynet
+
+NO2+O(+M)<=>NO3(+M)                        1.33E+13      0.00          0.0
+     LOW  /0.14900E+29   -0.40800E+01    0.24670E+04/
+    TROE /0.82600E+00    0.10000E-89    0.31910E+04/
+NO2+H<=>NO+OH                              1.32E+14      0.00        361.6  ! Yetter
+!NO2+H=NO+OH                                 2.500E+14   0.00    6.760E+02   ! Baulch 2005 A/5.000E+14 error (+/-0.1-0.3) 230-800 K 2.500E+14
+NO2+OH(+M)<=>HNO3(+M)                      2.41E+13      0.00          0.0
+     LOW  /0.64200E+33   -0.54900E+01    0.23500E+04/
+     TROE /0.83700E+00    0.10000E-89    0.16570E+04/
+HO2+NO<=>NO2+OH                            2.11E+12      0.00       -479.0
+NO2+NO2<=>NO3+NO                           9.64E+09      0.73      20920.0
+NO2+NO2<=>NO+NO+O2                         1.63E+12      0.00      26120.0
+NO2+O<=>O2+NO                              1.00E+13      0.00        600.0
+
+NO3+H=NO2+OH                               6.00E+13  0.00E+00  0.000E+00 ! Meynet
+NO3+O=NO2+O2                               1.00E+13  0.00E+00  0.000E+00 ! Meynet
+NO3+OH=NO2+HO2                             1.00E+13  0.00E+00  0.000E+00 ! Meynet
+NO3+HO2=NO2+O2+OH                          1.50E+12  0.00E+00  0.000E+00 ! Meynet
+NO3+NO2=NO+NO2+O2                          4.90E+10  0.00E+00  2.940E+03 ! Meynet
+
+N2O(+M)<=>N2+O(+M)                         7.91E+10      0.00      56040.0
+     LOW /0.87888E+15   0.000   0.57550E+05/
+     H2O/7.50/ NO/2.00/
+N2O+O<=>O2+N2                              1.00E+14      0.00      28000.0
+N2O+O<=>NO+NO                              1.00E+14      0.00      28000.0
+N2O+H<=>N2+OH                              2.23E+14      0.00      16750.0
+N2O+OH<=>HO2+N2                            2.00E+12      0.00      40000.0
+
+NH+M<=>N+H+M                               2.65E+14      0.00      75510.0
+NH+O2=HNO+O                                4.600E+05   2.00    6.500E+03 ! KLIMIC2011 cited Skreiberg 2004
+NH+O2<=>NO+OH                              7.60E+10      0.00       1530.0
+NH+O<=>NO+H                                5.50E+13      0.00          0.0
+NH+O<=>N+OH                                3.72E+13      0.00          0.0
+NH+OH<=>HNO+H                              2.00E+13      0.00          0.0
+NH+OH<=>N+H2O                              5.00E+11      0.50       2000.0
+NH+N<=>N2+H                                3.00E+13      0.00          0.0
+NH+NO<=>N2O+H                              2.94E+14     -0.40          0.0
+NH+NO<=>N2+OH                              2.16E+13     -0.23          0.0
+NH+NO2<=>NO+HNO                            1.00E+11      0.50       4000.0      !??? -0.5
+NH+NO2<=>N2O+OH                            1.00E+13      0.00          0.0
+NH+NH<=>N2+H+H                             5.10E+13      0.00          0.0
+NH+NH2=N2H2+H                              3.16E+13  0.00E+00  9.940E+02 ! Meynet
+NH+NH=NNH+H                                7.94E+11  0.50E+00  9.940E+02 ! Meynet
+NH+NH=NH2+N                                2.00E+11  0.50E+00  1.987E+03 ! Meynet
+
+NH2+O2=HNO+OH                              6.200E+07     1.20    3.510E+04  ! Skreiberg 2004 also used by Zhang 2011 /Lamoureux 2016
+NH2+O<=>HNO+H                              6.63E+14     -0.50          0.0
+NH2+O<=>NH+OH                              6.75E+12      0.00          0.0
+NH2+H<=>NH+H2                              6.92E+13      0.00       3650.0
+NH2+OH<=>NH+H2O                            4.00E+06      2.00       1000.0
+NH2+N<=>N2+H+H                             7.20E+13      0.00          0.0
+NH2+NO<=>NNH+OH                            2.80E+13     -0.55          0.0
+NH2+NO<=>N2+H2O                            8.82E+15     -1.25          0.0
+NH2+NO<=>N2O+H2                            5.00E+13      0.00      24640.0
+NH2+NO<=>HNO+NH                            1.00E+13      0.00      40000.0
+NH2+NO2<=>N2O+H2O                          3.28E+18     -2.20          0.0
+NH2+NH2<=>NH3+NH                           5.00E+13      0.00      10000.0
+NH2+M=NH+H+M                               3.16E+23 -2.00E+00  9.140E+04 ! Meynet
+NH2+NO=N2+H+OH                             6.30E+19 -2.50E+00  1.900E+03 ! Meynet
+NH2+NH2=N2H2+H2                            3.98E+13  0.00E+00  1.192E+04 ! Meynet
+NH2+NO2=H2NO+NO                            1.05E+13  0.00E+00  0.000E+00 ! Meynet
+
+NH3(+M)=NH2+H(+M)                          9.000E+16   -0.39   1.103E+05    ! Baulch 2005 A/2.800E+17 error (+/-0.5) 2000- 3000 K
+     LOW/2.000E+16  0.00  9.315E+04/                                        ! Baulch 2005 A/1.820E+16 error(+/-0.3) 2000-3000 K M=AR
+     TROE/ 0.42  4581.0  102.0  1.0E+14/                                    !
+     H2/1.0/H2O/6.40/O2/0.45/N2/0.40/                              ! Griffith & Barnard
+NH3+O<=>NH2+OH                             9.40E+06      1.94       6460.0
+NH3+H<=>NH2+H2                             6.40E+05      2.39      10170.0
+NH3+OH<=>NH2+H2O                           2.04E+06      2.04        566.0
+NH3+HO2<=>NH2+H2O2                         3.00E+11      0.00      22000.0
+NH2+HO2=NH3+O2                             9.200E+05     1.94   -1.152E+03  ! Skreiberg 2004 also used by KLIMIC2011
+NH3+M=NH+H2+M                              6.30E+14  0.00E+00  9.339E+04 ! Meynet
+NH3+NH2=N2H3+H2                            1.000E+11   0.50   2.160E+04  ! Coppens 2007
+
+NNH+M<=>N2+H+M                             1.00E+14      0.00       3000.0
+NNH+H<=>N2+H2                              1.00E+14      0.00          0.0
+NNH+NO<=>N2+HNO                            5.00E+13      0.00          0.0
+NNH+O<=>N2O+H                              1.00E+14      0.00          0.0
+NNH+OH<=>N2+H2O                            5.00E+13      0.00          0.0
+NNH+NH<=>N2+NH2                            5.00E+13      0.00          0.0
+NNH+NH2<=>N2+NH3                           5.00E+13      0.00          0.0
+HNO+O<=>OH+NO                              1.81E+13      0.00          0.0
+
+
+! NNH=N2+H                                   3.26E+11     -.961         4222.0 ! Meynet
+! NNH+O2=HO2+N2                             .500E+13      .00000E+00   .00000E+00 ! Meynet
+! NNH+O=OH+N2                               .250E+14      .00000E+00   .00000E+00 ! Meynet
+! NNH+O=NH+NO                               .700E+14      .00000E+00   .00000E+00 ! Meynet
+! NNH+M=NH+N+M                               1.00E+15  0.00E+00  6.954E+04 ! Meynet
+! NNH+N=NH+N2                                3.16E+13  0.00E+00  1.987E+03 ! Meynet
+! NNH+NNH=N2H2+N2                            1.00E+13  0.00E+00  9.935E+03 ! Meynet
+
+N2H2+M=NNH+H+M                             1.00E+16  0.00E+00  4.968E+04 ! Meynet
+N2H2+M=NH+NH+M                             3.16E+16  0.00E+00  9.935E+04 ! Meynet
+N2H2+H=NNH+H2                              1.00E+13  0.00E+00  9.940E+02 ! Meynet
+N2H2+O=NNH+OH                              1.00E+11  0.50E+00  0.000E+00 ! Meynet
+N2H2+OH=NNH+H2O                            1.00E+13  0.00E+00  1.987E+03 ! Meynet
+N2H2+NH=NNH+NH2                            1.00E+13  0.00E+00  9.940E+02 ! Meynet
+N2H2+NH2=NNH+NH3                           1.00E+13  0.00E+00  3.974E+03 ! Meynet
+N2H2+NO=N2O+NH2                            3.00E+12  0.00E+00  0.000E+00 ! Meynet
+N2H2+NH2=N2H3+NH                           1.00E+11  0.50E+00  3.378E+04 ! Meynet
+N2H2+N2H2=N2H3+NNH                         1.00E+13  0.00E+00  9.935E+03 ! Meynet
+
+N2H3+M=NH2+NH+M                            1.00E+16  0.00E+00  4.173E+04 ! Meynet
+N2H3+H=N2H2+H2                             1.00E+12  0.00E+00  1.987E+03 ! Meynet
+N2H3+H=NH2+NH2                             1.58E+12  0.00E+00  0.000E+00 ! Meynet
+N2H3+H=NH+NH3                              1.00E+11  0.00E+00  0.000E+00 ! Meynet
+N2H3+O=N2H2+OH                             3.16E+11  0.50E+00  0.000E+00 ! Meynet
+N2H3+O=NNH+H2O                             3.16E+11  0.50E+00  0.000E+00 ! Meynet
+N2H3+OH=N2H2+H2O                           1.00E+13  0.00E+00  1.987E+03 ! Meynet
+N2H3+NH2=N2H2+NH3                          1.00E+11  0.50E+00  0.000E+00 ! Meynet
+N2H3+N2H2=N2H4+NNH                         1.00E+13  0.00E+00  9.935E+03 ! Meynet
+
+N2H4+M=NH2+NH2+M                           4.00E+15  0.00E+00  4.093E+04 ! Meynet
+N2H4+M=N2H3+H+M                            1.00E+15  0.00E+00  6.358E+04 ! Meynet
+N2H4+H=N2H3+H2                             1.29E+13  0.00E+00  2.503E+03 ! Meynet
+N2H4+H=NH2+NH3                             4.46E+09  0.00E+00  3.099E+03 ! Meynet
+N2H4+O=N2H2+H2O                            6.31E+13  0.00E+00  1.192E+03 ! Meynet
+N2H4+O=N2H3+OH                             2.51E+12  0.00E+00  1.192E+03 ! Meynet
+N2H4+OH=N2H3+H2O                           3.98E+13  0.00E+00  0.000E+00 ! Meynet
+N2H4+NH=NH2+N2H3                           1.00E+12  0.00E+00  1.987E+03 ! Meynet
+N2H4+NH2=N2H3+NH3                          3.98E+11  0.50E+00  1.987E+03 ! Meynet
+N2H4+N2H2=N2H3+N2H3                        2.50E+10  0.50E+00  2.981E+04 ! Meynet
+
+HNO+OH<=>H2O+NO                            1.00E+13      0.00        993.5
+HNO+NO<=>N2O+OH                            2.00E+12      0.00      26000.0
+HNO+NO2<=>HONO+NO                          6.02E+11      0.00       1987.0
+HNO+HNO<=>H2O+N2O                          8.51E+08      0.00       3080.0
+HNO+O2<=>NO+HO2                            1.00E+13      0.00      25000.0
+HNO+NH2<=>NO+NH3                           2.00E+13      0.00       1000.0
+O2+HNO=NO2+OH                              1.50E+13  0.00E+00  1.000E+04 ! Meynet
+
+H2NO+H=HNO+H2                              3.00E+07  2.00E+00  2.000E+03 ! Meynet
+H2NO+H=NH2+OH                              5.00E+13  0.00E+00  0.000E+00 ! Meynet
+H2NO+O=HNO+OH                              3.00E+07  2.00E+00  2.000E+03 ! Meynet
+H2NO+OH=HNO+H2O                            2.00E+07  2.00E+00  1.000E+03 ! Meynet
+H2NO+NO2=HNO+HONO                          6.00E+11  0.00E+00  2.000E+03 ! Meynet
+H2NO+NH2=HNO+NH3                           3.00E+12  0.00E+00  1.000E+03 ! Meynet
+
+HONO+O<=>OH+NO2                            1.20E+13      0.00       5961.0
+HONO+H<=>H2+NO2                            1.20E+13      0.00       7352.0
+HONO+OH<=>H2O+NO2                          1.26E+10      1.00        135.1
+! HONO+NH=NH2+NO2               		   1.00E+13  0.00E+00  0.000E+00 ! Meynet
+! HONO+NH2=NH3+NO2                           5.00E+12  0.00E+00  0.000E+00 ! Meynet
+! HONO+HONO=NO+NO2+H2O                       2.30E+12  0.00E+00  8.400E+03 ! Meynet
+
+CL+HO2=HCL+O2                 1.80E+13  0.00E+00  0.000E+00
+CL+NH2=HCL+NH                 5.01E+10  0.50E+00  0.000E+00
+CL+O2+M=CLOO+M                9.70E+11  0.00E+00  0.000E+00
+CL+O2+M=CLO2+M                8.00E+06  0.00E+00  5.200E+03
+CL+N2O=CLO+N2                 1.20E+14  0.00E+00  3.350E+04
+NH3+CL=HCL+NH2                4.47E+11  0.50E+00  1.000E+02
+CL+CL+M=CL2+M                       2.3E+19  -1.50      0.0 ! Pelucchi
+H2/2.0/ CL2/6.9/ N2/2.0/
+CLOO+CL=CLO+CLO               4.80E+12  0.00E+00  0.000E+00
+CL2+NO=NOCL+CL                2.70E+12  0.00E+00  1.990E+04
+CL2+H=HCL+CL	                      8.6E+13	  0.00   1172.0 ! Baulch et al., 1981, Pelucchi
+CL+H2=HCL+H	               9.5E+07   1.72     3060 ! Kumaran et al., 1994 ! Pelucchi
+H+CL+M=HCL+M	                       2.0E+23  -2.45      0.0 ! Schading and Roth, 1994 (Pelucchi)
+ H2/2.0/ CL2/2.0/ N2/2.0/
+CL+H2O2=HCL+HO2                     6.6E+12   0.00     1950 ! Atkinson et al., 2007 (Pelucchi)
+CL+HO2=CLO+OH                       3.8E+13   0.00     1200 ! Atkinson et al., 2007 (Pelucchi)
+CL2+O=CL+CLO	                      4.5E+12	  0.00   3279.0 ! Wine et al., 1985 (Pelucchi)
+CL2+OH=HOCL+CL	                    2.2E+08	  1.35	 1480.0 ! Bryukov et al., 2004 (Pelucchi)
+
+CLO+NO=CL+NO2                 6.78E+12  0.00E+00  3.110E+02
+CLO+HNO=HCL+NO2               3.00E+12  0.00E+00  0.000E+00
+CLO+NH2=HNO+HCL               2.50E+12  0.00E+00  0.000E+00
+CLO+CLO=CL2+O2                1.00E+11  0.00E+00  0.000E+00
+CLO+O=CL+O2                   6.60E+13  0.00E+00  4.400E+02
+CLO+H2=CLOH+H                 0.603E+12 0.00E+00  14100.
+CLO+NH3=NH2+CLOH              6.00E+11  0.50E+00  6.400E+03
+CLO+H=CL+OH                         3.8E+13	  0.00     0.0  ! Wategaonkar and Setser, 1989 (Pelucchi)
+CLO+H=HCL+O	                        8.4E+12	  0.00	   0.0  ! Wategaonkar and Setser, 1989 (Pelucchi)
+CLO+OH=HCL+O2                       3.5E+05   1.67    -3827 ! Zhu and Lin, 2011 (Pelucchi)
+CLO+HO2=HOCL+O2                     7.8E+03   2.40     5110 ! Zhu and Lin, 2011 (Pelucchi)
+CLO+HO2=CLOO+OH	                    4.6E+05 	1.80	   2116 ! Zhu and Lin, 2011 (Pelucchi)
+
+CLO2+CLO2=CLO+CLO3            1.82E+13  0.00E+00  1.800E+04
+CLO2+NO=CLO+NO2               1.00E+11  0.00E+00  0.000E+00
+CLO2+NH=CLO+HNO               1.00E+14  0.00E+00  0.000E+00
+CLO2+CL=2CLO                  5.00E+13  0.00E+00  6.000E+03
+
+CLO3=CLO+O2                   1.70E+13  0.50E+00  0.000E+00
+
+CLOH+O=HCL+O2                 1.20E+14  0.00E+00  0.000E+00
+CLOH+OH=CLO+H2O               1.82E+13  0.00E+00  0.000E+00
+CLOH+HCL=H2O+CL2              4.00E+11  0.00E+00  1.000E+04
+CLOH+CLO=CL2+HO2              1.00E+11  0.00E+00  1.000E+04
+CLOH+CLO=CLOO+HCL             4.00E+10  0.00E+00  0.000E+00
+CLOH+NH=NOCL+H2               1.00E+13  0.00E+00  0.000E+00
+CLOH+HNO=NOCL+H2O             3.00E+12  0.00E+00  0.000E+00
+
+NOCL+M=NO+CL+M                2.00E+17  0.00E+00  3.770E+04
+NOCL+CLO=NO2+CL2              1.50E+12  0.00E+00  0.000E+00
+
+HCL+HO2=CLO+H2O               3.00E+12  0.00E+00  0.000E+00
+HCL+O=CL+OH                         5.9E+05   2.11     4024
+HCL+OH=H2O+CL                 5.00E+11  0.00E+00  7.500E+02
+
+HCLO4=OH+CLO3                 1.00E+13  0.00E+00  3.910E+04
+HCLO4+NO=CLO+NO2+HO2          5.00E+14  0.00E+00  1.000E+04
+HCLO4+HNO=H2O+NO+CLO3         1.50E+13  0.00E+00  6.000E+03
+HCLO4+HNO=H2O+NO2+CLO2        2.00E+13  0.00E+00  6.000E+03
+HCLO4+NH=CLO2+HNO+OH          1.00E+14  0.00E+00  0.000E+00
+HCLO4+NH=CLO3+N+H2O           1.00E+14  0.00E+00  1.100E+04
+HCLO4+NH2=H2O+HNO+CLO2        1.00E+12  0.00E+00  0.000E+00
+HCLO4+NH2=CLOH+HNO+HO2        1.00E+11  0.00E+00  0.000E+00
+
+
+
+END REACTIONS

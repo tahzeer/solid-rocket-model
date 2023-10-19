@@ -3,6 +3,7 @@ Adiabatic flame temperature and equilibrium composition for a fuel/air mixture
 as a function of equivalence ratio.
 """
 
+import matplotlib.pyplot as plt
 import cantera as ct
 import numpy as np
 import csv
@@ -28,13 +29,14 @@ in2 = gas.species_index('N2')
 
 # air composition
 air_N2_O2_ratio = 3.76
-stoich_O2 = gas.n_atoms(fuel_species,'C') + 0.25*gas.n_atoms(fuel_species,'H')
+stoich_O2 = gas.n_atoms(fuel_species, 'C') + 0.25 * \
+    gas.n_atoms(fuel_species, 'H')
 
 
 # create some arrays to hold the data
 phi = np.zeros(npoints)
 tad = np.zeros(npoints)
-xeq = np.zeros((gas.n_species,npoints))
+xeq = np.zeros((gas.n_species, npoints))
 
 
 for i in range(npoints):
@@ -51,17 +53,17 @@ for i in range(npoints):
     gas.equilibrate('HP')
 
     tad[i] = gas.T
-    xeq[:,i] = gas.X
-    print("At phi = ","%10.4f"% (phi[i])+ "  Tad = ","%10.4f"% (tad[i]))
+    xeq[:, i] = gas.X
+    print("At phi = ", "%10.4f" % (phi[i]) + "  Tad = ", "%10.4f" % (tad[i]))
 
 
 # write output CSV file for importing into Excel
 csv_file = 'adiabatic.csv'
 with open(csv_file, 'w') as outfile:
     writer = csv.writer(outfile)
-    writer.writerow(['phi','T (K)'] + gas.species_names)
+    writer.writerow(['phi', 'T (K)'] + gas.species_names)
     for i in range(npoints):
-        writer.writerow([phi[i], tad[i]] + list(xeq[:,i]))
+        writer.writerow([phi[i], tad[i]] + list(xeq[:, i]))
 print(f'Output written to {0}'.format(csv_file))
 
 
@@ -70,8 +72,8 @@ print(f'Output written to {0}'.format(csv_file))
 if '--plot' in sys.argv:
     import matplotlib.pyplot as plt
     for i, cas in enumerate(gas.species_names):
-        if cas in ['O2','CO2','CO']:
-            plt.plot(phi,xeq[i,:], label = cas)
+        if cas in ['O2', 'CO2', 'CO']:
+            plt.plot(phi, xeq[i, :], label=cas)
             plt.hold(True)
     plt.xlabel('Equivalence ratio')
     plt.ylabel('Mass fractions')
@@ -81,7 +83,6 @@ if '--plot' in sys.argv:
 
 # The adiabatic flame temperature
 # plt.savefig('plot_flamespeed-'+str(tin)+'-'+str(p)+'.png', bbox_inches='tight')
-import matplotlib.pyplot as plt
 plt.plot(phi, tad)
 plt.xlabel('Equivalence ratio')
 plt.ylabel('Adiabatic flame temperature [K]')
