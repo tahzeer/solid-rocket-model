@@ -67,24 +67,24 @@ with open(csv_file, 'w') as outfile:
 print(f'Output written to {0}'.format(csv_file))
 
 
-# Plot your results
-# The mass fractions of selected species
-if '--plot' in sys.argv:
-    import matplotlib.pyplot as plt
-    for i, cas in enumerate(gas.species_names):
-        if cas in ['O2', 'CO2', 'CO']:
-            plt.plot(phi, xeq[i, :], label=cas)
-            plt.hold(True)
-    plt.xlabel('Equivalence ratio')
-    plt.ylabel('Mass fractions')
-    plt.hold(False)
-    plt.legend(loc='best')
-    plt.savefig('plot.png', bbox_inches='tight')
+# # Plot your results
+# # The mass fractions of selected species
+# if '--plot' in sys.argv:
+#     import matplotlib.pyplot as plt
+#     for i, cas in enumerate(gas.species_names):
+#         if cas in ['O2', 'CO2', 'CO']:
+#             plt.plot(phi, xeq[i, :], label=cas)
+#             plt.hold(True)
+#     plt.xlabel('Equivalence ratio')
+#     plt.ylabel('Mass fractions')
+#     plt.hold(False)
+#     plt.legend(loc='best')
+#     plt.savefig('plot.png', bbox_inches='tight')
 
-# The adiabatic flame temperature
-# plt.savefig('plot_flamespeed-'+str(tin)+'-'+str(p)+'.png', bbox_inches='tight')
-plt.plot(phi, tad)
-plt.xlabel('Equivalence ratio')
-plt.ylabel('Adiabatic flame temperature [K]')
-plt.show()
-plt.savefig('plot.png', bbox_inches='tight')
+# # The adiabatic flame temperature
+# # plt.savefig('plot_flamespeed-'+str(tin)+'-'+str(p)+'.png', bbox_inches='tight')
+# plt.plot(phi, tad)
+# plt.xlabel('Equivalence ratio')
+# plt.ylabel('Adiabatic flame temperature [K]')
+# plt.show()
+# plt.savefig('plot.png', bbox_inches='tight')
