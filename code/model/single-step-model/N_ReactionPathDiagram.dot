@@ -1,0 +1,15 @@
+digraph reaction_paths {
+center=1;
+s9 -> s3[fontname="CMU Serif", penwidth=6, arrowsize=3, color="0.7, 1.5, 0.9"
+, label=" 1\l fwd: 1\l + HCLO4\l \l rev: 6.48e-26\l + H2O + H2O + O2 + O2 + N2O + NO + HCL + CL2\l"];
+s9 -> s4[fontname="CMU Serif", penwidth=6, arrowsize=3, color="0.7, 1.5, 0.9"
+, label=" 1\l fwd: 1\l + HCLO4\l \l rev: 6.48e-26\l + H2O + H2O + O2 + O2 + N2 + NO + HCL + CL2\l"];
+s9 -> s5[fontname="CMU Serif", penwidth=5.48, arrowsize=2.74, color="0.7, 1, 0.9"
+, label=" 0.5\l fwd: 0.5\l + HCLO4\l \l rev: 3.24e-26\l + H2O + H2O + O2 + O2 + N2 + N2O + HCL + CL2\l"];
+s3 [ fontname="CMU Serif", label="N2"];
+s4 [ fontname="CMU Serif", label="N2O"];
+s5 [ fontname="CMU Serif", label="NO"];
+s9 [ fontname="CMU Serif", label="NH3"];
+ label = "Scale = 4.6e-08\l ";
+ fontname = "CMU Serif";
+}
