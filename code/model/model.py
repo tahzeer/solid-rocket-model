@@ -1,1 +1,0 @@
-import cantera as ct

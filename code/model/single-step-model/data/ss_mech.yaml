@@ -200,4 +200,4 @@ reactions:
 - equation: NH3 + HCLO4 <=> 1.62 H2O + 1.015 O2 + 0.265 N2 + 0.12 N2O + 0.23 NO + 0.76 HCL + 0.12 CL2
   rate-constant: {A: 1.45e+5, b: 0.0, Ea: 21856.55}
 - equation: 1.62 H2O + 1.015 O2 + 0.265 N2 + 0.12 N2O + 0.23 NO + 0.76 HCL + 0.12 CL2 + 0.523 C2H4 <=> 0.469 CO + 0.577 CO2 + 0.093 CL + 0.034 H + 0.907 HCL + 0.417 H2 + 2.089 H2O + 0.48 N2 + 0.04 NO + 0.009 O + 0.139 OH + 0.05 O2
-  rate-constant: {A: 1.938e+11, b: 0.0, Ea: 3000}
+  rate-constant: {A: 1.938e+11, b: 0.0, Ea: 30000}
